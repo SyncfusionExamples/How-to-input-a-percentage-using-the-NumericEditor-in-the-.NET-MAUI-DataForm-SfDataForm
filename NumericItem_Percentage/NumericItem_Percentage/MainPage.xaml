@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:local="clr-namespace:NumericItem_Percentage"
+             x:Class="NumericItem_Percentage.MainPage">
+
+    <ContentPage.Content>
+        <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding DataFormModel}">
+            <dataForm:SfDataForm.DefaultLayoutSettings>
+                <dataForm:DataFormDefaultLayoutSettings 
+                LabelPosition="Top"/>
+            </dataForm:SfDataForm.DefaultLayoutSettings>
+            <dataForm:SfDataForm.BindingContext>
+                <local:DataFormViewModel/>
+            </dataForm:SfDataForm.BindingContext>
+        </dataForm:SfDataForm>
+    </ContentPage.Content>
+    <ContentPage.Behaviors>
+        <local:DataFormBehavior/>
+    </ContentPage.Behaviors>
+</ContentPage>
